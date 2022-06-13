@@ -1,4 +1,4 @@
-import { PluginOption } from 'vite';
+import { Plugin } from 'vite';
 import { resolve } from 'path';
 import { getHtmlPages, getHugoConfig } from './utils';
 
@@ -13,7 +13,7 @@ export interface Options {
      */
     appDir: string
 }
-export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption {
+export default function hugoPlugin({ hugoOutDir, appDir }: Options): Plugin {
     const hugoConfig = getHugoConfig(appDir);
 
     const ignoreBuildPaths: string[] = [];
