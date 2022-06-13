@@ -1,4 +1,3 @@
-import { PluginOption } from 'vite';
 import { resolve } from 'path';
 import { getHtmlPages, getHugoConfig } from './utils';
 
@@ -13,7 +12,7 @@ export interface Options {
      */
     appDir: string
 }
-export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption {
+export default function hugoPlugin({ hugoOutDir, appDir }: Options) {
     const hugoConfig = getHugoConfig(appDir);
 
     const ignoreBuildPaths: string[] = [];
@@ -24,7 +23,7 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOptio
     }
 
     return {
-        name: 'hugo-plugin',
+        name: 'vite-plugin-hugo',
         config: () => ({
             // Resolve aliases
             alias: {
@@ -42,7 +41,6 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOptio
                     // Routing
                     input: getHtmlPages(hugoOutDir, ignoreBuildPaths)
                 }
-
             }
         })
     }
