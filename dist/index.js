@@ -12,12 +12,14 @@ function hugoPlugin({ hugoOutDir, appDir }) {
     return {
         name: 'vite-plugin-hugo',
         config: () => ({
-            // Resolve aliases
-            alias: {
-                // Resolving path in imports.
-                js: (0, path_1.resolve)(appDir, 'assets', 'js'),
-                '/assets': (0, path_1.resolve)(appDir, 'assets'),
-                '/plugins': (0, path_1.resolve)(hugoOutDir, 'plugins'),
+            resolve: {
+                // Resolve aliases
+                alias: {
+                    // Resolving path in imports.
+                    js: (0, path_1.resolve)(appDir, 'assets', 'js'),
+                    '/assets': (0, path_1.resolve)(appDir, 'assets'),
+                    '/plugins': (0, path_1.resolve)(hugoOutDir, 'plugins'),
+                }
             },
             build: {
                 // Build vite into the same directory as hugo
