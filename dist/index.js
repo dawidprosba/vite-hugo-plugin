@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = require("path");
 const utils_1 = require("./utils");
-function hugoPreact({ hugoOutDir, appDir }) {
+function hugoPlugin({ hugoOutDir, appDir }) {
     const hugoConfig = (0, utils_1.getHugoConfig)(appDir);
     const ignoreBuildPaths = [];
     // Ignore default content language as hugo build it into out dir instead of language dir.
@@ -10,7 +10,7 @@ function hugoPreact({ hugoOutDir, appDir }) {
         ignoreBuildPaths.push((0, path_1.resolve)(hugoOutDir, hugoConfig.defaultContentLanguage));
     }
     return {
-        name: 'hugo-preact',
+        name: 'vite-plugin-hugo',
         config: () => ({
             // Resolve aliases
             alias: {
@@ -32,4 +32,4 @@ function hugoPreact({ hugoOutDir, appDir }) {
         })
     };
 }
-exports.default = hugoPreact;
+exports.default = hugoPlugin;

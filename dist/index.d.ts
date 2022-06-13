@@ -9,4 +9,4 @@ export interface Options {
      */
     appDir: string;
 }
-export default function hugoPreact({ hugoOutDir, appDir }: Options): PluginOption;
+export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption;

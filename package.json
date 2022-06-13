@@ -1,6 +1,6 @@
 {
   "name": "vite-hugo-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Plugin that makes it easy to have hugo with vite",
   "scripts": {
     "build": "tsc"
