@@ -1,7 +1,7 @@
 {
-  "name": "vitejs-hugo-plugin",
-  "version": "1.0.0",
-  "description": "Plugin that makes it easy to have hugo with vitejs",
+  "name": "vite-hugo-plugin",
+  "version": "1.0.1",
+  "description": "Plugin that makes it easy to have hugo with vite",
   "scripts": {
     "build": "tsc"
   },
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DcBD/vitejs-hugo-plugin.git"
+    "url": "git+https://github.com/DcBD/vite-hugo-plugin.git"
   },
   "keywords": [
     "vite",
@@ -25,9 +25,9 @@
   "author": "Dawid Prośba",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DcBD/vitejs-hugo-plugin/issues"
+    "url": "https://github.com/DcBD/vite-hugo-plugin/issues"
   },
-  "homepage": "https://github.com/DcBD/vitejs-hugo-plugin#readme",
+  "homepage": "https://github.com/DcBD/vite-hugo-plugin#readme",
   "types": "dist/index.d.ts",
   "main": "dist/index.js"
 }
