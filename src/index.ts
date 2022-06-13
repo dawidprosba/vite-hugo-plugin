@@ -26,12 +26,14 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): Plugin {
     return {
         name: 'vite-plugin-hugo',
         config: () => ({
-            // Resolve aliases
-            alias: {
-                // Resolving path in imports.
-                js: resolve(appDir, 'assets', 'js'),
-                '/assets': resolve(appDir, 'assets'),
-                '/plugins': resolve(hugoOutDir, 'plugins'),
+            resolve: {
+                // Resolve aliases
+                alias: {
+                    // Resolving path in imports.
+                    js: resolve(appDir, 'assets', 'js'),
+                    '/assets': resolve(appDir, 'assets'),
+                    '/plugins': resolve(hugoOutDir, 'plugins'),
+                }
             },
             build: {
                 // Build vite into the same directory as hugo
