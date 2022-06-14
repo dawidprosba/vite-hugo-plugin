@@ -26,6 +26,7 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): Plugin {
     return {
         name: 'vite-plugin-hugo',
         config: () => ({
+            root: hugoOutDir,
             resolve: {
                 // Resolve aliases
                 alias: {
