@@ -9,7 +9,7 @@ function hugoPlugin({ hugoOutDir, appDir }) {
     if (hugoConfig.defaultContentLanguage) {
         ignoreBuildPaths.push((0, path_1.resolve)(hugoOutDir, hugoConfig.defaultContentLanguage));
     }
-    return {
+    const hugo = {
         name: 'vite-plugin-hugo',
         config: () => ({
             root: hugoOutDir,
@@ -34,5 +34,6 @@ function hugoPlugin({ hugoOutDir, appDir }) {
             }
         })
     };
+    return hugo;
 }
 exports.default = hugoPlugin;
