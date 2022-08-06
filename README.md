@@ -1,6 +1,11 @@
 # Vite HUGO Plugin
 > Plugin that makes integrating Vite into Hugo application painless.
 
+## Vite < 3.0.0
+This plugin is compatibile with vite under 3.0.0 version, but may cause 
+some typescript typing error, check https://github.com/DcBD/vite-hugo-plugin/pull/2 for more information.
+
+
 ## Example usage
 
 ```ts
