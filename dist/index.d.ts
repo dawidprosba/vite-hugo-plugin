@@ -1,4 +1,4 @@
-import { Plugin } from 'vite';
+import { PluginOption } from 'vite';
 export interface Options {
     /**
      * Output path to hugo build directory.
@@ -9,4 +9,4 @@ export interface Options {
      */
     appDir: string;
 }
-export default function hugoPlugin({ hugoOutDir, appDir }: Options): Plugin;
+export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption;
