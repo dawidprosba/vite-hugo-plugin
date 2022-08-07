@@ -11,7 +11,7 @@ some typescript typing error, check https://github.com/DcBD/vite-hugo-plugin/pul
 ```ts
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import hugoPlugin from 'vitejs-hugo-plugin'
+import hugoPlugin from 'vite-hugo-plugin'
 
 // Root directory of our application
 const appDir = __dirname;
