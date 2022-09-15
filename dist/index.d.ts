@@ -8,5 +8,9 @@ export interface Options {
      * Root directory of an application.
      */
     appDir: string;
+    /**
+     * Patterns to ignore html input files for rollup.
+     */
+    ignoreHTMLFiles: string[];
 }
-export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption;
+export default function hugoPlugin({ hugoOutDir, appDir, ignoreHTMLFiles }: Options): PluginOption;

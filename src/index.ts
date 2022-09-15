@@ -12,8 +12,13 @@ export interface Options {
      * Root directory of an application.
      */
     appDir: string
+
+    /**
+     * Patterns to ignore html input files for rollup.
+     */
+    ignoreHTMLFiles: string[]
 }
-export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOption {
+export default function hugoPlugin({ hugoOutDir, appDir, ignoreHTMLFiles = [] }: Options): PluginOption {
     const hugoConfig = getHugoConfig(appDir);
 
     const ignoreBuildPaths: string[] = [];
@@ -23,7 +28,7 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOptio
         ignoreBuildPaths.push(resolve(hugoOutDir, hugoConfig.defaultContentLanguage));
     }
 
-    const hugo : Plugin = {
+    const hugo: Plugin = {
         name: 'vite-plugin-hugo',
         config: () => ({
             root: hugoOutDir,
@@ -43,7 +48,7 @@ export default function hugoPlugin({ hugoOutDir, appDir }: Options): PluginOptio
                 emptyOutDir: false,
                 rollupOptions: {
                     // Routing
-                    input: getHtmlPages(hugoOutDir, ignoreBuildPaths)
+                    input: getHtmlPages(hugoOutDir, [...ignoreBuildPaths, ...ignoreHTMLFiles])
                 }
             }
         })
