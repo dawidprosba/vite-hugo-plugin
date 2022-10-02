@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import { sync as getFilesSync } from 'fast-glob';
+const normalize = require('normalize-path');
 
 type InputsOption = {
     [key: string]: string
@@ -11,7 +12,7 @@ type InputsOption = {
  * @param ignore An array of glob patterns to exclude matches.
  */
 export default function getHtmlPages(pagesDir: string, ignore: string[]): InputsOption {
-    const path = resolve(pagesDir, '**', '*.html');
+    const path = normalize(resolve(pagesDir, '**', '*.html'));
 
     const pages = getFilesSync(path, {
         ignore
