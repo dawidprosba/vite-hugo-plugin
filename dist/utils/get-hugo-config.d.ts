@@ -5,7 +5,7 @@ declare type LintHugoConfigProperties = {
     defaultContentLanguage?: string;
 };
 /**
- * Gets hugo config, function supports only `toml` extension.
+ * Gets hugo config, function supports toml|yaml|json extensions.
  * @param appDir directory where `config.toml` is located.
  */
 export default function getHugoConfig(appDir: string): LintHugoConfigProperties;
