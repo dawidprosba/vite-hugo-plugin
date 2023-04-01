@@ -1,4 +1,4 @@
-import { PluginOption } from 'vite';
+import { PluginOption } from "vite";
 export interface Options {
     /**
      * Output path to hugo build directory.
@@ -11,6 +11,10 @@ export interface Options {
     /**
      * Patterns to ignore html input files for rollup.
      */
-    ignoreHTMLFiles: string[];
+    ignoreHTMLFiles?: string[];
+    /**
+     * Hugo config file name. By default is set to `hugo.toml`.
+     */
+    hugoConfigFileName?: string;
 }
-export default function hugoPlugin({ hugoOutDir, appDir, ignoreHTMLFiles }: Options): PluginOption;
+export default function hugoPlugin({ hugoOutDir, appDir, ignoreHTMLFiles, hugoConfigFileName, }: Options): PluginOption;
