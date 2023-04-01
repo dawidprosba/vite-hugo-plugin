@@ -5,6 +5,8 @@
 This plugin is compatibile with vite under 3.0.0 version, but may cause 
 some typescript typing error, check https://github.com/DcBD/vite-hugo-plugin/pull/2 for more information.
 
+## For older version of hugo
+Added `hugoConfigFileName` property to specify which hugo config it should use. By default it's `hugo.toml`
 
 ## Example usage
 
