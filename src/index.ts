@@ -23,7 +23,7 @@ export interface Options {
    */
   hugoConfigFileName?: string;
 }
-export default function hugoPlugin({
+function hugoPlugin({
   hugoOutDir,
   appDir,
   ignoreHTMLFiles = [],
@@ -71,3 +71,5 @@ export default function hugoPlugin({
 
   return hugo;
 }
+
+export default hugoPlugin
