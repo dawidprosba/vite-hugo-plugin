@@ -7,14 +7,13 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
-    "tsup": "^8.0.1",
+    "tsup": "^9.0.0",
     "typescript": "^4.7.3"
   },
   "dependencies": {
     "fast-glob": "^3.2.11",
     "normalize-path": "^3.0.0",
-    "toml": "^3.0.0",
-    "vite-hugo-plugin": "^5.0.0",
+    "toml": "^5.0.1",
     "yaml": "^2.2.1"
   },
   "repository": {

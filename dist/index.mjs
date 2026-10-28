@@ -1,8 +1,7 @@
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
 }) : x)(function(x) {
-  if (typeof require !== "undefined")
-    return require.apply(this, arguments);
+  if (typeof require !== "undefined") return require.apply(this, arguments);
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
 
@@ -99,9 +98,9 @@ function hugoPlugin({
   };
   return hugo;
 }
-var src_default = hugoPlugin;
+var index_default = hugoPlugin;
 export {
-  src_default as default
+  index_default as default
 };
 module.exports = module.exports.default;
 //# sourceMappingURL=index.mjs.map

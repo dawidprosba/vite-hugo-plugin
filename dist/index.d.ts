@@ -20,4 +20,5 @@ interface Options {
 }
 declare function hugoPlugin({ hugoOutDir, appDir, ignoreHTMLFiles, hugoConfigFileName, }: Options): PluginOption;
 
-export { type Options, hugoPlugin as default };
+export { hugoPlugin as default };
+export type { Options };
